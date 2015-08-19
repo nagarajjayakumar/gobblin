@@ -296,25 +296,25 @@
   } ],
   "schema" : {
     "schema" : "gobblin.rest.JobExecutionQueryResult",
-    "path" : "/jobExecutions",
     "name" : "jobExecutions",
-    "namespace" : "gobblin.rest",
-    "doc" : "A Rest.li resource for serving queries of Gobblin job executions.\n\ngenerated from: gobblin.rest.JobExecutionInfoResource",
+    "doc" : "generated from: gobblin.rest.JobExecutionInfoResource",
+    "path" : "/jobExecutions",
     "collection" : {
-      "identifier" : {
-        "name" : "jobExecutionsId",
-        "type" : "gobblin.rest.JobExecutionQuery",
-        "params" : "com.linkedin.restli.common.EmptyRecord"
-      },
       "methods" : [ {
         "method" : "get"
       }, {
         "method" : "batch_get"
       } ],
-      "supports" : [ "batch_get", "get" ],
       "entity" : {
         "path" : "/jobExecutions/{jobExecutionsId}"
+      },
+      "supports" : [ "batch_get", "get" ],
+      "identifier" : {
+        "name" : "jobExecutionsId",
+        "params" : "com.linkedin.restli.common.EmptyRecord",
+        "type" : "gobblin.rest.JobExecutionQuery"
       }
-    }
+    },
+    "namespace" : "gobblin.rest"
   }
 }

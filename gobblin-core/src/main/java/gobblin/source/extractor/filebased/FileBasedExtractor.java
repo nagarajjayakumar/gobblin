@@ -178,7 +178,7 @@ public abstract class FileBasedExtractor<S, D> extends InstrumentedExtractor<S, 
 
     try {
       InputStream inputStream = this.closer.register(this.fsHelper.getFileStream(file));
-      Iterator<D> fileItr = (Iterator<D>) IOUtils.lineIterator(inputStream, ConfigurationKeys.DEFAULT_CHARSET_ENCODING);
+      Iterator<D> fileItr = (Iterator<D>) IOUtils.lineIterator(inputStream, ConfigurationKeys.DEFAULT_CHARSET_ENCODING.toString());
       if (workUnitState.getPropAsBoolean(ConfigurationKeys.SOURCE_SKIP_FIRST_RECORD, false) && fileItr.hasNext()) {
         fileItr.next();
       }

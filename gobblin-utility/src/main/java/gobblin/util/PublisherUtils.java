@@ -3,9 +3,6 @@ package gobblin.util;
 import java.util.Collection;
 import java.util.Map;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
 import com.google.common.base.Predicate;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Iterables;
@@ -15,6 +12,8 @@ import gobblin.configuration.WorkUnitState;
 import gobblin.configuration.WorkUnitState.WorkingState;
 import gobblin.publisher.DataPublisher;
 import gobblin.source.workunit.Extract;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 /**
  * Utility class for {@link DataPublisher}.

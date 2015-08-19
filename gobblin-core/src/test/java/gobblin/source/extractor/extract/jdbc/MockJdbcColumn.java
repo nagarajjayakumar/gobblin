@@ -16,10 +16,12 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class MockJdbcColumn {
+public  class MockJdbcColumn {
 
-  private final String columnName;
-  private final String value;
-  private final int type;
+  private final String columnName  ;
+  private final String value ;
+  private final int type ;
+  
+  
 
 }

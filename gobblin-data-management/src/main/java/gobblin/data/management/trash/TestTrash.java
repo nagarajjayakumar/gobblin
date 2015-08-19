@@ -21,6 +21,7 @@ import org.apache.hadoop.fs.Path;
 
 import com.google.common.collect.Lists;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 
@@ -47,6 +48,8 @@ public class TestTrash extends MockTrash {
    * deletion. When calling {@link #moveToTrash}, {@link #user} is set to null.
    */
   @Data
+  @Getter
+  @AllArgsConstructor
   public static class DeleteOperation {
     private final Path path;
     private final String user;

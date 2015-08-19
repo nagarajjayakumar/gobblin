@@ -19,14 +19,15 @@ import org.apache.hadoop.fs.Path;
 
 import com.google.common.collect.Sets;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 
 /**
  * Implementation of {@link gobblin.data.management.retention.version.DatasetVersion} that uses a single path per
  * version and stores the {@link org.apache.hadoop.fs.FileStatus} of that path.
  */
-@Data
+@Getter
 public class FileStatusDatasetVersion extends StringDatasetVersion {
 
   private final FileStatus fileStatus;

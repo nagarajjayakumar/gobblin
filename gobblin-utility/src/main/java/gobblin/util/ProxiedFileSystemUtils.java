@@ -17,15 +17,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.security.PrivilegedExceptionAction;
 import java.util.Properties;
-import java.util.concurrent.ExecutionException;
-
-import com.google.common.base.Optional;
-import com.google.common.base.Preconditions;
-import com.google.common.io.Closer;
-
-import lombok.AllArgsConstructor;
-import lombok.NonNull;
-import lombok.extern.slf4j.Slf4j;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
@@ -35,8 +26,15 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.security.UserGroupInformation;
 import org.apache.hadoop.security.token.Token;
 
+import com.google.common.base.Optional;
+import com.google.common.base.Preconditions;
+import com.google.common.io.Closer;
+
 import gobblin.configuration.ConfigurationKeys;
 import gobblin.configuration.State;
+import lombok.AllArgsConstructor;
+import lombok.NonNull;
+import lombok.extern.slf4j.Slf4j;
 
 
 /**
